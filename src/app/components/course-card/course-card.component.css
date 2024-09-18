@@ -1,0 +1,9 @@
+.BEGINNER {
+  border: 8px solid lightgreen;
+}
+.INTERMEDIATE {
+  border: 8px solid lightgoldenrodyellow;
+}
+.ADVANCED {
+  border: 8px solid lightcoral;
+}

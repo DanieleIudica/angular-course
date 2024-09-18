@@ -6,7 +6,7 @@
 </div>
 
 <div class="courses">
-  @for (course of courses; track course.id ) {
+  @for (course of courses; track course?.id ) {
 
   <course-card
     (courseClick)="viewCourse($event)"
