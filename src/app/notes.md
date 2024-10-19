@@ -13,3 +13,26 @@ ngAfterViewInit() è il momento in cui accedere alle variabili prese dal templat
 
 - interessante video su Angular Content Projection (vedi anche contentChild ):
   link: "https://www.udemy.com/course/angular-course/learn/lecture/11937904#notes"
+
+- valutare potenzialità direttive e direttive strutturali custom per avere maggiore controllo su style e funzionalità
+
+l'\* in una direttiva strutturale è una shortcut, in realtà crea un ng-template intorno al tag in cui viene usato e applica la direttiva in quel punto:
+
+``
+
+<p *ngIf=true>pippo</> 
+``
+è uguale a:
+
+``
+<ng-template [ngIf]=true>
+
+  <p>pippo</p>
+</ng-template>
+``
+
+# concetto view encapsulation per il css,
+
+- :host si riferisce al componente stesso
+- ::ng-deep bypassa il view encapsulation
+- :host-context(.nome-classe) .nome.classe (cerca se serve)
