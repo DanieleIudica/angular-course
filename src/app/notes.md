@@ -20,7 +20,7 @@ l'\* in una direttiva strutturale è una shortcut, in realtà crea un ng-templat
 
 ``
 
-<p *ngIf=true>pippo</> 
+<p *ngIf=true>pippo</p> 
 ``
 è uguale a:
 
@@ -36,3 +36,10 @@ l'\* in una direttiva strutturale è una shortcut, in realtà crea un ng-templat
 - :host si riferisce al componente stesso
 - ::ng-deep bypassa il view encapsulation
 - :host-context(.nome-classe) .nome.classe (cerca se serve)
+
+# @defer
+
+- un blocco @defer crea un nuovo javascript bundle che viene caricato dopo gli altri
+- vedi diff tra @placeholder e @loading
+- @defer(on timer(10s); prefetch on timer(5s)) >> con questi triggers dico di precaricare il bundle dopo 5s e mostrarlo dopo 10
+- @error block sara' mostrato solo in caso di fetch error del bundle e in questo caso solo dopo 10s
