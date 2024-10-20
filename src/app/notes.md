@@ -43,3 +43,15 @@ l'\* in una direttiva strutturale è una shortcut, in realtà crea un ng-templat
 - vedi diff tra @placeholder e @loading
 - @defer(on timer(10s); prefetch on timer(5s)) >> con questi triggers dico di precaricare il bundle dopo 5s e mostrarlo dopo 10
 - @error block sara' mostrato solo in caso di fetch error del bundle e in questo caso solo dopo 10s
+- il trigger @defer(on viewport) mostra il contenuto del blocco quando il placeholder entra nel viewport, altrimenti puo' avere un trigger custom tipo:
+
+``
+
+<p #entra>quando entro nel viewport</p>
+ @defer(on viewport(entra)){
+  <p>carica</p>
+ }
+``
+
+- vedi - il trigger @defer(on interaction) e on hover
+- vedi custom triggers @defer(when customDisplay; prefetch when customPrefetch )
