@@ -1,19 +1,19 @@
-
 .top-menu {
-    background: #1976d2;
-    padding: 2px 15px;
+  background: #1976d2;
+  padding: 2px 15px;
 }
 
 .logo {
   max-height: 55px;
 }
 
-
 .courses {
-    max-width: 400px;
-    margin: 50px auto;
+  max-width: 400px;
+  margin: 50px auto;
 }
 
-
-
-
+.signal {
+  background-color: #f7ff8b;
+  padding: 24px;
+  border-radius: 16px;
+}

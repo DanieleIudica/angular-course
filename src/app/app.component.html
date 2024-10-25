@@ -5,8 +5,24 @@
   />
 </div>
 
+<div class="demo signal">
+  <h2>Signals:</h2>
+  <p>Counter: {{ counter() }}</p>
+  <p>Counter Srv: {{ signalsSrv.counter() }}</p>
+  <p>derivedCounter: {{ derivedCounter() }}</p>
+  <button (click)="increment()">Increment</button>
+  <button (click)="signalsSrv.increment()">Increment srv</button>
+</div>
+
+<div class="demo">
+  <h2>pipes:</h2>
+  <p>number: {{ numb | number : "2.3-5" }}</p>
+  <p>vedi slice</p>
+  <p>vedi keyvalue per ciclare chiavi e valori di un oggetto</p>
+</div>
+
 <div class="courses">
-  @for (course of courses; track course?.id ) {
+  @for (course of courses | slice : 0 : 6; track course?.id ) {
 
   <course-card
     (courseClick)="viewCourse($event)"
