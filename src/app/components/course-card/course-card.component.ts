@@ -11,6 +11,12 @@ import { Category, Course } from "src/app/model/course";
 })
 export class CourseCardComponent {
   @Input() course: Course;
+
+  // vedi input signalss:
+  // course = input<Course>()
+  // vedi metodi alias e transform
+  // usando effect(()=>{}); nei input signals si bypassa ngOnChanges
+
   @Input() index: number;
   @Output() courseClick = new EventEmitter();
   Category = Category;
